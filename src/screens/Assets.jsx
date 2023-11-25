@@ -25,6 +25,7 @@ const assetSearch= assets.data.data
 const btc = assetSearch.find(item => item.symbol === 'BTC');
 btc.tokensOwned=4
 const eth = assetSearch.find(item => item.symbol === 'ETH');
+eth.tokensOwned=2
 const ltc = assetSearch.find(item => item.symbol === 'LTC');
 const matic = assetSearch.find(item => item.symbol === 'MATIC');
 const xlm = assetSearch.find(item => item.symbol === 'XLM');
@@ -48,9 +49,12 @@ const link  = assetSearch.find(item => item.symbol === 'LINK');
 const shib  = assetSearch.find(item => item.symbol === 'SHIB');
 const dot  = assetSearch.find(item => item.symbol === 'DOT');
 const aave  = assetSearch.find(item => item.symbol === 'AAVE');
+
+// const totalSum= (btc.priceUsd * btc.tokensOwned)+(eth.priceUsd * btc.tokensOwned)
+
   return (
     <div>
-      <h1>All the Assets!</h1>
+      <h1>Portfolio Value:  </h1>
       <div className="assets-container">
         {/* {
             assets.data.data.map((asset,index)=>(   
