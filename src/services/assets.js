@@ -2,8 +2,8 @@ import api from "./apiConfig"
 // We are doing postman stuff but coding it.
 export const getAssets = async () => {
     try {
-        const assets = await api.get('/assets?limit=150')
-        return assets.data
+        const response = await api.get('/assets?limit=150')
+        return response.data.data
     } catch (error) {
         console.log('Error:getting all assets: ', error)
     }

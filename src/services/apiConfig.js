@@ -18,4 +18,5 @@ if (window.location.hostname ==='localhost') {
 const api = axios.create({
     baseURL: apiUrl,
 })
+
 export default api;

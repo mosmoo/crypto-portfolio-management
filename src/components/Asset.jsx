@@ -1,21 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-function Asset({asset}) { //destructuring props
-    const total = asset.tokensOwned * asset.priceUsd
+function Asset({asset, quantity}) { //destructuring props
+  
   return (
-    <div> 
-    <Link to ={`/assets/${asset.id}`}>
-        <table>
-            <tr>
-            <td>{asset.id}</td>
-            <td>{asset.priceUsd}</td>
-            <td>{asset.tokensOwned}</td>
-            <td>{total}</td>
-            </tr>
-        </table>
+    <tr>
+      <Link to ={`/assets/${asset.id}`}>
+        <td>{asset.name}</td>
+        <td>{asset.priceUsd}</td>
+        <td>{quantity}</td>
+        <td>{quantity * asset.priceUsd}</td>
       </Link> 
-  </div>
+    </tr>
   )
 }
 
